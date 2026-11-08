@@ -1,0 +1,93 @@
+:root {
+    --theme-color: rgb(210, 185, 185);
+    --font: "Share Tech", sans-serif;
+    --under-line: rgb(96, 89, 98);
+}
+body {
+    color: var(--theme-color);
+    font-family: var(--font);
+    background-image: url(ressources/website-bg-space.jpg);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+a, a:visited {
+    color: rgb(147, 156, 98);
+    transition: 0.3s ease;
+}
+.mark {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.047);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: clamp(50px, 100px, 150px);
+    font-size: 40px;
+    text-shadow: 3px 3px 3px;
+    gap: 20px;
+}
+.logo img {
+    width: 70px;
+    border: solid;
+    margin-left: 10px;
+}
+.sidebar {
+    color: rgb(4, 4, 4);
+    font-size: 40px;
+    text-shadow: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    gap: 30px;
+    margin-right: 50px;
+}
+.sidebar a{
+    color: aliceblue;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+.unirte-a-nos::after, .material::after, .inicio::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background-color: #e8e6e662;
+    transition: 0.2s ease;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.unirte-a-nos:hover::after, .material:hover::after, .inicio:hover::after {
+    height: 100%;
+}
+/* Main content */
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-size: 60px;
+    transition: 600ms ease;
+    overflow: scroll;
+}
+.documentation {
+    opacity: 0;
+    scale: 0.5;
+    transition: 600ms ease;
+}
+.show {
+    opacity: 1;
+    scale: 1;
+}
+.main img {
+    width: 600px;
+}
